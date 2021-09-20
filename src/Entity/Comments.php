@@ -26,16 +26,15 @@ class Comments
      * @ORM\Column(type="date")
      */
     private $date;
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
+     */
+    private $user;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="comments")
      */
-    private $id_users;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $id_articles;
+    private $article;
 
     public function getId(): ?int
     {
@@ -86,6 +85,30 @@ class Comments
     public function setIdArticles(int $id_articles): self
     {
         $this->id_articles = $id_articles;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getArticle(): ?Article
+    {
+        return $this->article;
+    }
+
+    public function setArticle(?Article $article): self
+    {
+        $this->article = $article;
 
         return $this;
     }
