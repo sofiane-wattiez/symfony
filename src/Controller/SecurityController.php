@@ -10,6 +10,13 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
 
+    /**
+     * @Route("/home", name="home")
+     */
+    // public function home(AuthenticationUtils $authenticationUtils): Response
+    // {
+    //     return new Response('home');
+    // }
 
 
     /**
@@ -17,9 +24,9 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('home');
-        // }
+        if ($this->getUser()) {
+            return $this->redirectToRoute('app_home');
+        }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
@@ -29,13 +36,8 @@ class SecurityController extends AbstractController
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
-    /**
-     * @Route("/home", name="home")
-     */
-    public function home(AuthenticationUtils $authenticationUtils): Response
-    {
-        return new Response('Vous êtes connecté !');
-    }
+
+
     /**
      * @Route("/logout", name="app_logout")
      */

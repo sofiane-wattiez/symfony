@@ -12,6 +12,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+// use Symfony\Component\PasswordHasher;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 
 class RegistrationController extends AbstractController
@@ -22,6 +24,8 @@ class RegistrationController extends AbstractController
     {
         $this->emailVerifier = $emailVerifier;
     }
+
+
 
     /**
      * @Route("/register", name="app_register")
