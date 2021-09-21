@@ -22,11 +22,6 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $id_article;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $titre;
 
     /**
@@ -57,18 +52,6 @@ class Article
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getIdArticle(): ?string
-    {
-        return $this->id_article;
-    }
-
-    public function setIdArticle(string $id_article): self
-    {
-        $this->id_article = $id_article;
-
-        return $this;
     }
 
     public function getTitre(): ?string
