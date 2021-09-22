@@ -43,7 +43,7 @@ class AppFixtures extends Fixture
 
         for ($i = 0; $i < 20; $i++) {
             $user = new User();
-            $user->setEmail('email' . $i);
+            $user->setEmail('email' . $i . '@gmail.com');
             $user->setRoles(['ROLE_USER']);
             $password = $this->encodeur->hashPassword($user, 'password');
             $user->setPassword($password);
