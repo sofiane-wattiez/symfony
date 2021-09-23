@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Voici l'article N°?{% endblock %}
+{% block title %}Article{% endblock %}
 
 {% block body %}
 
-{# <link rel="stylesheet" href="../style.css"> #}
+
 
 <div class="title">
 <h1>Article</h1>
@@ -13,8 +13,11 @@
 
 
 
-{% for article in categories.findAll() %}
-                    <a class="dropdown-item --bs-pink list-group-item d-flex justify-content-between align-items-center" href="#">{{category.name}} &nbsp <small class=" badge bg-primary rounded-pill">{{category.getPost()|length}}</small></a>
-                {% endfor %}
+{% for article in articles  %}
+{{app.article.title}}
+<div class="article">
+<a href="{{ path('app_article', {'id' : article.id }) }}" class="btn btn-danger">Article</a>
+</div>
+{% endfor %}
 
 {% endblock %}
