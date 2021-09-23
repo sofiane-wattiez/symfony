@@ -7,17 +7,25 @@
 
 
 
-<div class="title">
+{# <div class="title">
 <h1>Article</h1>
-</div>
+</div> #}
 
 
 
 {% for article in articles  %}
-{{app.article.title}}
-<div class="article">
-<a href="{{ path('app_article', {'id' : article.id }) }}" class="btn btn-danger">Article</a>
+{# {{article.title}} #}
+<div class="article text-center">
+    <p class="text-center"> {{article.titre}}</p>
+        <div class="article-image">
+        <img src="{{ path('app_article', {'id' : article.id }) }}">
+        <div class="contenu">
+        <p>{{article.contenu}}</p>
+        {# <p>{{article.date}}</p>    #}
+        </div>
+    </div>
 </div>
+
 {% endfor %}
 
 {% endblock %}
