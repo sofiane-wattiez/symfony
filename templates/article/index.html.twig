@@ -17,7 +17,8 @@
 {# {{article.title}} #}
 <div class="article text-center">
     <p class="text-center"> {{article.titre}}</p>
-        <div class="article-image">
+    {# <p class="text-center"> {{article.titre}}</p> #}
+    <div class="article-image">
         <img src="{{ path('app_article', {'id' : article.id }) }}">
         <div class="contenu">
         <p>{{article.contenu}}</p>

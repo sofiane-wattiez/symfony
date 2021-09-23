@@ -1,0 +1,24 @@
+body {
+    /* background-color: lightgray;
+    display: flex;
+    justify-content: center; */
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+p{
+    border: solid 2px red;  
+    padding: 5%;
+    margin: 2%;
+}
+.article  {
+    border: solid 2px red;
+    text-align: center;
+    margin: 2.5%;
+    padding: 5%;
+    height: 40%;
+}
+img{
+    border: solid 2px red;
+}
