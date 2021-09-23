@@ -9,40 +9,36 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
             <link rel="stylesheet" href="{{asset('/styles/app.css')}}">
-            {# <link rel="stylesheet" href="{{ asset('css/body.css') }}"> #}
-
-
-            {# <link rel="stylesheet" href="{{ path(./styles/app.scss) }}"> #}
-         
         {% endblock %}
     </head>
     <body>
+
         <nav class="navbar navbar-light bg-light align-center" style="height: 100px;">
-        <div class="test">
         
-            <i style="color: #444; font-size: 2rem;" class="pb-1 fad fa-cauldron"></i>
-            <p class=" text-left font-weight-bold" style="color: #444;"> <a href="{{ path('app_home') }}">My Blog</a></button>
-          </a>
+        <div class="test"><p class=" text-left font-weight-bold" style="color: #444;"> <a href="{{ path('app_article') }}">My Blog</a></button></div>
+            {# <i style="color: #444; font-size: 2rem;" class="pb-1 fad fa-cauldron"></i> #}
+            
+
+        {% if app.user %}
+        <div class="text-center">   
+            <h1>Hello {{ app.user.username }}! ✅</h1>   
         </div>
-          
+        {% endif %}
 
 
-        
-            {% if app.user %}
-        <button class="btn btn-dark text-center justify-center">
-         <a href="{{ path('app_logout') }}">{{ app.user.username }} <br>Logout</a>
-        </button>
-            {% endif %}
-          <button class="btn btn-dark"><a href="{{ path('app_register') }}">Register</a></button>
+        {% if app.user %}
+        <button class="btn btn-dark"><a href="{{ path('app_logout') }}">Logout</a></button>
+        {% else %}
+        <button class="btn btn-dark"><a href="{{ path('app_register') }}">Register</a></button>
+        {% endif %}
         </nav>
         {% block body %}
 
-        {# {% for article in articles  %} #}
-            {# {{article.title}}
-            <div class="article">
-            <a href="{{ path('app_article', {'id' : articles.id }) }}" class="btn btn-danger">Article</a>
-            </div> #}
-        {# {% endfor %} #}
+        
+
+
+
+
         
         {% endblock %}
         <footer class="mt-5 p-3 text-center">
