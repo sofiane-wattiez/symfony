@@ -25,9 +25,9 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 20; $i++) {
 
             $article = new Article();
-            $article->setTitre('titre' . $i);
-            $article->setContenu('contenu' . $i);
-            $article->setImageArticle('./symfony\public\styles\037.png');
+            $article->setTitre('TITRE ' . $i);
+            $article->setContenu('Contenu ' . $i);
+            $article->setImageArticle('/styles/037.png');
             $article->setDate(new \DateTime('now'));
             $manager->persist($article);
         }

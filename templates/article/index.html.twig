@@ -10,14 +10,18 @@
 {% for article in articles  %}
 {# {{article.title}} #}
 <div class="article text-center">
-    <p class="text-center"> {{article.titre}}</p>
+    <h1 class="text-center"> {{article.titre}}</h1>
     {# <p class="text-center"> {{article.titre}}</p> #}
     <div class="article-image">
-        <img src="{{ path('app_article', {'id' : article.id }) }}">
+        <img src= {{article.getImageArticle}}  alt="">
         <div class="contenu">
         <p>{{article.contenu}}</p>
+        
         {# <p>{{article.date}}</p>    #}
         </div>
+        {# <div class="comment">
+        <p>{{article.getComments}}</p>
+        </div> #}
     </div>
 </div>
 
