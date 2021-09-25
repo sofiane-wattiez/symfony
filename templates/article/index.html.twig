@@ -23,8 +23,15 @@
         <p>{{article.getComments}}</p>
         </div> #}
     </div>
+    {% endfor %}
+
+    {% for comments in commentss  %}
+    <div class="comment">
+    <p>{{}}</p>
+    </div>
+    {% endfor %}
 </div>
 
-{% endfor %}
+
 
 {% endblock %}

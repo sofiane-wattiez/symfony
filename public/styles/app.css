@@ -21,6 +21,7 @@ img{
     border: solid 2px red;
     margin: auto;
     max-width: 80%;
+    box-shadow: 10px 5px 5px black;
 }
 input{
     margin: auto;

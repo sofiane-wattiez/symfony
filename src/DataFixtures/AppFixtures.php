@@ -26,7 +26,7 @@ class AppFixtures extends Fixture
 
             $article = new Article();
             $article->setTitre('TITRE ' . $i);
-            $article->setContenu('Contenu ' . $i);
+            $article->setContenu('Lorem ipsum dolor sit amet consectetur adipisici  distinctio aperiam possimus libero veritatis minima,repudiandae, neque unde ipsam rerum nulla ratione iusto illo animi voluptates aliquam!');
             $article->setImageArticle('/styles/037.png');
             $article->setDate(new \DateTime('now'));
             $manager->persist($article);
