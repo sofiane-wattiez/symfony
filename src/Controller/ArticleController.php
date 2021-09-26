@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ArticleRepository;
+use App\Form\CommentFormType;
+
 // use App\Repository\PostRepository;
 
 class ArticleController extends AbstractController
