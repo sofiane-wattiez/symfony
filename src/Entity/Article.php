@@ -44,9 +44,15 @@ class Article
      */
     private $comments;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="annonces", orphanRemoval=true)
+     */
+    private $commentss;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
+        $this->commentss = new ArrayCollection();
     }
 
     public function getId(): ?int
