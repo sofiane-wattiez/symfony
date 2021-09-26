@@ -20,7 +20,7 @@ class Comments
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", length=255)
      */
     private $contenu;
 
@@ -37,12 +37,6 @@ class Comments
      * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="comments")
      */
     private $article;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    private $content;
-
     /**
      * @ORM\Column(type="boolean")
      */
@@ -54,30 +48,10 @@ class Comments
     private $email;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
-     */
-    private $created_at;
-
-    /**
      * @ORM\Column(type="boolean")
      */
     private $rgpd;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="commentss")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $annonces;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Comments::class, inversedBy="replies")
-     */
-    private $parent;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="parent")
-     */
-    private $replies;
 
     public function __construct()
     {
@@ -197,17 +171,6 @@ class Comments
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
 
     public function getRgpd(): ?bool
     {
@@ -217,30 +180,6 @@ class Comments
     public function setRgpd(bool $rgpd): self
     {
         $this->rgpd = $rgpd;
-
-        return $this;
-    }
-
-    public function getAnnonces(): ?Article
-    {
-        return $this->annonces;
-    }
-
-    public function setAnnonces(?Article $annonces): self
-    {
-        $this->annonces = $annonces;
-
-        return $this;
-    }
-
-    public function getParent(): ?self
-    {
-        return $this->parent;
-    }
-
-    public function setParent(?self $parent): self
-    {
-        $this->parent = $parent;
 
         return $this;
     }
