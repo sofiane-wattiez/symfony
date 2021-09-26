@@ -6,19 +6,21 @@ h1{
     
 }
 p{
-    border: solid 2px red;  
+    border: solid 2px black;  
     padding: 5%;
     margin: 2%;
+    box-shadow: 10px 5px 5px black;
 }
 .article  {
-    border: solid 2px red;
+    border: solid 2px black;
     text-align: center;
     margin: 2.5%;
     padding: 5%;
     height: 40%;
+    box-shadow: 10px 5px 5px black;
 }
 img{
-    border: solid 2px red;
+    border: solid 2px black;
     margin: auto;
     max-width: 80%;
     box-shadow: 10px 5px 5px black;
