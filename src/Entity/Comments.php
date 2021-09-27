@@ -77,11 +77,13 @@ class Comments
 
     public function getDate(): ?\DateTimeInterface
     {
+
         return $this->date;
     }
 
     public function setDate(\DateTimeInterface $date): self
     {
+        // $date =  date_format('d m Y');
         $this->date = $date;
 
         return $this;

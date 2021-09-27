@@ -16,13 +16,14 @@ p{
     text-align: center;
     margin: 2.5%;
     padding: 5%;
-    height: 40%;
+   max-height: 25%;
     box-shadow: 10px 5px 5px black;
 }
 img{
     border: solid 2px black;
     margin: auto;
-    max-width: 80%;
+    max-width: 50%;
+    max-height: 50%;
     box-shadow: 10px 5px 5px black;
 }
 input{
@@ -38,4 +39,7 @@ form{
     margin: auto;
     /* width: 20%; */
     text-align: center;
+}
+.navbar{
+    height: 20%;
 }
