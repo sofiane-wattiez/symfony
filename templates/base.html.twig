@@ -19,7 +19,7 @@
 		<nav class="navbar navbar-light bg-light align-center" style="height: 20%;">
 
 			<div class="btn btn-dark">
-				<a href="{{ path('app_article') }}">My Blog</a>
+				<a href="{{ path('app_article') }}">MY BLOG</a>
 			</div>
 			{# <i style="color: #444; font-size: 2rem;" class="pb-1 fad fa-cauldron"></i> #}
 
@@ -27,7 +27,7 @@
 			{% if app.user %}
 				<div class="text-center">
 					<h1>Hello
-						{{ app.user.username }}! ✅</h1>
+						{{ app.user.username }}!</h1>
 				</div>
 			{% endif %}
 
@@ -46,6 +46,14 @@
 			{% endif %}
 
 		</nav>
+		<div
+			class="banner">
+			<!-- contenteditable="true" -->
+			<h1 class="test">My Blogs</h1>
+			<!-- <img src="./img/BABIES_BEARS_SANSFOND-1024x234.png" alt=""> -->
+			<!-- <h1 data-text="FUNNY BEARS" class="creative-title">FUNNY BEARS</h1> -->
+			<h1></h1>
+		</div>
 		{% block body %}{% endblock %}
 		<footer class="mt-5 p-3 text-center">
 			Made with

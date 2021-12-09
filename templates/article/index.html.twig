@@ -1,41 +1,28 @@
 {% extends 'base.html.twig' %}
 
 
-{% block title %}Article{% endblock %}
+{% block title %}Article
+{% endblock %}
 
 {% block body %}
 
-  
 
-{% for article in articles  %}
-{# {{article.title}} #}
-<div class="article text-center">
-    <h1 class="text-center"> {{article.titre}}</h1>
-    {# <p class="text-center"> {{article.titre}}</p> #}
-    <div class="article-image">
-        <img src= {{article.getImageArticle}}  alt="">
-        <div class="contenu">
-        <h1>Content</h1>
-        <p>{{article.contenu}}</p>
+	{% for article in articles  %}
+		{# {{article.title}} #}
+		<div class="article text-center">
+			<h1 class="text-center">
+				{{article.titre}}</h1>
+			{# <p class="text-center"> {{article.titre}}</p> #}
+			<div class="article-image">
+				<img src={{article.getImageArticle}} alt="">
+				<div class="contenu">
+					<h1>Content</h1>
+					<p>{{article.contenu}}</p>
 
-        </div>
-    </div>
-</div>
-    {% endfor %}
-
-        {# {% else %}
-        <div>No comments have been posted yet for this conference.</div>
-        {% endif %} #}
-        {# <h2>Add your own feedback</h2>
-        {{ form(comment_form) }} #}
-
-    {# {% for comments in commentss  %}
-    <div class="comment">
-    <p>{{}}</p>
-    </div>
-    {% endfor %} #}
-
-
+				</div>
+			</div>
+		</div>
+	{% endfor %}
 
 
 {% endblock %}
