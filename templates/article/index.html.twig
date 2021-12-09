@@ -19,14 +19,15 @@
         <p>{{article.contenu}}</p>
 
         </div>
-       {# <div class="comments">
-        {{comments.buildForm}}
-        </div>
-         #}
-        
     </div>
 </div>
     {% endfor %}
+
+        {# {% else %}
+        <div>No comments have been posted yet for this conference.</div>
+        {% endif %} #}
+        {# <h2>Add your own feedback</h2>
+        {{ form(comment_form) }} #}
 
     {# {% for comments in commentss  %}
     <div class="comment">

@@ -83,7 +83,8 @@ class Comments
 
     public function setDate(\DateTimeInterface $date): self
     {
-        // $date =  date_format('d m Y');
+        $date = new \DateTime('2000-01-01');
+        echo $date->format('Y-m-d');
         $this->date = $date;
 
         return $this;
