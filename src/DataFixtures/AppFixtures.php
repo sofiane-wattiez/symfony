@@ -32,14 +32,14 @@ class AppFixtures extends Fixture
             $manager->persist($article);
         }
 
-        for ($i = 0; $i < 20; $i++) {
-            $comments = new Comments();
-            $comments->setContenu('contenu' . $i);
-            $comments->setDate(new \DateTime('now'));
-            // $comments->setUserId('user_id');
-            // $comments->setArticleId('article_id');
-            $manager->persist($comments);
-        }
+        // for ($i = 0; $i < 20; $i++) {
+        //     $comments = new Comments();
+        //     $comments->setContenu('contenu' . $i);
+        //     $comments->setDate(new \DateTime('now'));
+        //     // $comments->setUserId('user_id');
+        //     // $comments->setArticleId('article_id');
+        //     $manager->persist($comments);
+        // }
 
         for ($i = 0; $i < 20; $i++) {
             $user = new User();
