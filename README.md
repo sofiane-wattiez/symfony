@@ -16,7 +16,9 @@
 
 ## LOAD FIXTURE
 
-`php bin/console doctrine:fixtures:load`     
+`php bin/console doctrine:fixtures:load` 
+
+## RUN SERV ON DEAMON
 
 `symfony server:start -d`
 
