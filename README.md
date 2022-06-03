@@ -1,14 +1,21 @@
 # symfony blog 
 
-Use: cd symfony
+command for run : 
 
-composer update
-symfony self:update
+`cd symfony`
 
-symfony server:start -d
+`composer install && composer update @latest`
 
-# Login info
+`php bin/console doctrine:database:create`
 
-id: email0@gmail.com
+`php bin/console doctrine:migrations:migrate`
 
-pwd : password
+`php bin/console doctrine:fixtures:load`     
+
+`symfony server:start -d`
+
+# Login info for test
+
+id: `email0@gmail.com`
+
+pwd : `password`
