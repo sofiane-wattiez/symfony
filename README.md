@@ -1,5 +1,7 @@
 # symfony blog 
 
+**Warning ! This version is on rework actualy**
+
 `cd symfony`
 
 ## INSTALL & UPDATE DEPENDENCIES
